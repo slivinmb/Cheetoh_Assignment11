@@ -15,53 +15,6 @@
 
 import pandas as pd
 import os
-'''
-class FuelDataCleaner:
-    def __init__(self, filepath):
-        self.filepath = filepath
-        self.df = pd.read_csv(filepath)
-
-    def clean_gross_price(self):
-        # Format Gross Price to always show 2 decimal places
-        self.df['Gross Price'] = self.df['Gross Price'].apply(lambda x: f"{float(x):.2f}")
-
-    def remove_duplicates(self):
-        original_count = len(self.df)
-        self.df.drop_duplicates(inplace=True)
-        removed = original_count - len(self.df)
-        print(f"Removed {removed} duplicate row(s).")
-
-    def remove_anomalies(self, column='Fuel Type', anomaly_value='Pepsi', anomaly_file='dataPackage/data/dataAnomalies.csv'):
-        # Filter anomalies
-        anomalies = self.df[self.df[column] == anomaly_value]
-
-        # Keep only the normal data
-        self.df = self.df[self.df[column] != anomaly_value]
-
-        # Save anomalies to a separate file
-        if not anomalies.empty:
-            folder = os.path.dirname(anomaly_file)
-            if not os.path.exists(folder):
-                os.makedirs(folder)
-            anomalies.to_csv(anomaly_file, index=False)
-            print(f"Anomalies saved to: {anomaly_file}")
-        else:
-            print("No anomalies found to remove.")
-
-
-
-    def save_cleaned_file(self, folder='dataPackage/data', filename='cleanedData.csv'):
-        # Create the folder if it doesn't exist
-        if not os.path.exists(folder):
-            os.makedirs(folder)
-        
-        output_path = os.path.join(folder, filename)
-        self.df.to_csv(output_path, index=False)
-        print(f"Cleaned file saved to: {output_path}")
-
-    def get_cleaned_data(self):
-        return self.df
-'''
 
 class FuelDataCleaner:
     def __init__(self, filepath):
