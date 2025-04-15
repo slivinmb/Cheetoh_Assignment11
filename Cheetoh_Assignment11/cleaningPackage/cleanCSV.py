@@ -1,6 +1,6 @@
 # File Name : cleanCSV.py
 # Student Name: Michael Slivinski and Will Claus
-# email: slivinmb@mail.uc.edu
+# email: slivinmb@mail.uc.edu, clausws@mail.uc.edu
 # Assignment Number: Assignment 11
 # Due Date:   4/17/2025
 # Course #/Section:   IS4010-001
