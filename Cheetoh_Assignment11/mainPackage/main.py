@@ -24,3 +24,7 @@ if __name__ == "__main__":
 
     saver = FuelDataSaver(cleaner.get_cleaned_data())
     saver.save_cleaned_file()
+
+    
+    
+    
