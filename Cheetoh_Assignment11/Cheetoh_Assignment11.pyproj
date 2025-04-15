@@ -42,6 +42,12 @@
     <Compile Include="mainPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="zipPackage\zipCode.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zipPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cleaningPackage\" />
@@ -49,6 +55,7 @@
     <Folder Include="dataPackage\" />
     <Folder Include="dataPackage\Data\" />
     <Folder Include="mainPackage\" />
+    <Folder Include="zipPackage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="dataPackage\Data\cleanedData.csv" />

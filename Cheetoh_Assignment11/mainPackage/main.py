@@ -14,6 +14,7 @@
 
 from cleaningPackage.cleanCSV import *
 from csvPackage.saveCSV import *
+from zipPackage.zipCode import *
 
 if __name__ == "__main__":
     cleaner = FuelDataCleaner("fuelPurchaseData.csv")
