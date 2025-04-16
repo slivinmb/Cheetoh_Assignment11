@@ -1,4 +1,4 @@
-# File Name : main.py
+﻿# File Name : main.py
 # Student Name: Michael Slivinski and Will Claus
 # email: slivinmb@mail.uc.edu, clausws@mail.uc.edu
 # Assignment Number: Assignment 11
@@ -24,6 +24,23 @@ if __name__ == "__main__":
 
     saver = FuelDataSaver(cleaner.get_cleaned_data())
     saver.save_cleaned_file()
+
+    api_key = "e90608e0-1a1d-11f0-b8cd-6f36ea03aa8a"
+
+    def main():
+        filler = ZipCodeFiller(api_key)
+    
+    df = pd.read_csv("fuelPurchaseData.csv")
+
+    def main():
+        df = filler.fill_missing_zip_codes(df, city_col='City', zip_col='ZipCode', country_col='Country')
+
+    df.to_csv("fuelPurchaseData.csv", index=False)
+    print("ZIP code filling complete. Cleaned data saved to Data/cleanedData.csv.")
+
+
+
+  
 
     
     
