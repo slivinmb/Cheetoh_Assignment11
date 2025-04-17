@@ -5,9 +5,9 @@
 # Due Date:   4/17/2025
 # Course #/Section:   IS4010-001
 # Semester/Year:   Spring 2025
-# Brief Description of the assignment:  
+# Brief Description of the assignment:  This assignment shows us how to connect to an api and add zip codes to a csv file.
 
-# Brief Description of what this module does: 
+# Brief Description of what this module does: This module shows the saveCSV code 
 # Citations: 
 
 # Anything else that's relevant:
