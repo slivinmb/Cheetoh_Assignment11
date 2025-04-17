@@ -25,18 +25,24 @@ if __name__ == "__main__":
     saver = FuelDataSaver(cleaner.get_cleaned_data())
     saver.save_cleaned_file()
 
-    api_key = "0fe6b910-1b3e-11f0-a6b1-c90047118366"
+    if __name__ == "__main__":
+    # Step 1: Clean the data
+        cleaner = FuelDataCleaner("fuelPurchaseData.csv")
+    cleaner.remove_duplicates()
+    cleaner.remove_anomalies()
+    cleaner.clean_gross_price()
+    df = cleaner.get_cleaned_data()
 
-    def main():
-        filler = ZipCodeFiller(api_key)
-    
-    df = pd.read_csv("fuelPurchaseData.csv")
+    # Step 2: Fill ZIPs in Full Address (first 5 missing only)
+    api_key = "834cf3b0-1b40-11f0-b378-b5b61bee0da7"
+    filler = ZipCodeFiller(api_key)
+    updated_df = filler.fill_missing_zip_codes(df, address_col="Full Address", max_updates=5)
 
-    def main():
-        df = filler.fill_missing_zip_codes(df, city_col='City', zip_col='ZipCode', country_col='Country')
+    # Step 3: Save updated DataFrame to cleanedData.csv
+    saver = FuelDataSaver(updated_df)
+    saver.save_cleaned_file()
 
-    df.to_csv("fuelPurchaseData.csv", index=False)
-    print("ZIP code filling complete. Cleaned data saved to Data/cleanedData.csv.")
+    print("ZIP code filling complete. Cleaned data saved to dataPackage/data/cleanedData.csv.")
 
 
 
