@@ -7,15 +7,20 @@
 # Semester/Year:   Spring 2025
 # Brief Description of the assignment:  This assignment shows us how to connect to an api and add zip codes to a csv file.
 
-# Brief Description of what this module does: This module shows the saveCSV code 
+# Brief Description of what this module does: This module saves the cleaned data to a new csv.
 # Citations: 
-
+# www.chatgpt.com
 # Anything else that's relevant:
 
 
 import os
 
 class FuelDataSaver:
+    '''
+    This module defines the FuelDataSaver class, which is responsible for saving a cleaned
+    pandas DataFrame to a CSV file. It ensures the output directory exists and handles
+    file creation in a specified folder and filename.
+    '''
     def __init__(self, dataframe):
         self.df = dataframe
 

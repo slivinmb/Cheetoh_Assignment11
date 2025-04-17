@@ -7,9 +7,9 @@
 # Semester/Year:   Spring 2025
 # Brief Description of the assignment:  This assignment shows us how to connect to an api and add zip codes to a csv file.
 
-# Brief Description of what this module does: This module prints to the output 
+# Brief Description of what this module does: This module instantiates classes and invokes methods that clean the data and print to a new csv. 
 # Citations: 
-
+# www.chatgpt.com
 # Anything else that's relevant:
 
 from cleaningPackage.cleanCSV import *
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     saver = FuelDataSaver(cleaner.get_cleaned_data())
     saver.save_cleaned_file()
 
-    api_key = "e90608e0-1a1d-11f0-b8cd-6f36ea03aa8a"
+    api_key = "0fe6b910-1b3e-11f0-a6b1-c90047118366"
 
     def main():
         filler = ZipCodeFiller(api_key)

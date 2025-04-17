@@ -8,10 +8,11 @@
 # Brief Description of the assignment:  This assignment shows us how to connect to an api and add zip codes to a csv file.
 
 
-# Brief Description of what this module does: This module shows the clean data 
+# Brief Description of what this module does: This module cleans the data that is going to be saved to a new csv.
+# Brief Description of what this module does: This module cleans the data that is going to be saved to a new csv.
 
 # Citations: 
-
+# www.chatgpt.com
 # Anything else that's relevant:
 
 
@@ -19,6 +20,14 @@ import pandas as pd
 import os
 
 class FuelDataCleaner:
+    '''
+    This module defines the FuelDataCleaner class, which is responsible for performing
+    data cleaning operations on a fuel purchase dataset. It includes functionality to:
+    - Format gross price values
+    - Remove duplicate entries based on transaction number
+    - Remove anomalies from specified columns
+    - Export the cleaned data or anomalies
+    '''
     def __init__(self, filepath):
         self.filepath = filepath
         self.df = pd.read_csv(filepath)
